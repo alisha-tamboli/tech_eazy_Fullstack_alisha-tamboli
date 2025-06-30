@@ -1,0 +1,9 @@
+.search-parcel {
+  max-width: 600px;
+  margin: auto;
+}
+
+
+.btn-search:hover {
+  color: white;
+}

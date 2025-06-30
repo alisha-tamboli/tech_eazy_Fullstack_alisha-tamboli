@@ -1,0 +1,19 @@
+.parcel-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Orange Button Styling */
+.btn-form {
+  background-color: #ff6600;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.btn-form:hover {
+  background-color: #e65c00;
+  border-color: #e65c00;
+}

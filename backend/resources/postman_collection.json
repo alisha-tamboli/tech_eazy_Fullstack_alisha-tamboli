@@ -1,0 +1,123 @@
+{
+  "info": {
+    "name": "Zero Mile Parcel API",
+    "_postman_id": "12345678-9abc-def0-1234-56789abcdef0",
+    "description": "Postman collection for Zero Mile Delivery System (Node.js + SQLite backend)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Parcels",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/parcels",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "parcels"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get Parcel by Tracking ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/parcels/TRK123456",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "parcels",
+            "TRK123456"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Create Parcel",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"trackingId\": \"TRK123456\",\n    \"name\": \"Test Parcel\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/parcels",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "parcels"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Update Parcel (id = 1)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"trackingId\": \"TRK654321\",\n    \"name\": \"Updated Parcel\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/parcels/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "parcels",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Delete Parcel (id = 1)",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/parcels/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "parcels",
+            "1"
+          ]
+        }
+      }
+    }
+  ]
+}
